@@ -5,10 +5,10 @@
  * Easily update your social links below.
  */
 const links = {
-    discord: "YOUR_DISCORD_LINK",
-    facebook: "YOUR_FACEBOOK_LINK",
-    instagram: "YOUR_INSTAGRAM_LINK",
-    tiktok: "YOUR_TIKTOK_LINK"
+    discord: "https://discord.gg/fuUPVGZgBS",
+    facebook: "https://www.facebook.com/profile.php?id=61595118262910",
+    instagram: "https://www.instagram.com/jinstudiorblx/",
+    tiktok: "https://www.tiktok.com/@whyalis0"
 };
 
 /**

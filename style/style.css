@@ -1,0 +1,266 @@
+:root {
+    --bg-darker: #000000;
+    --bg-dark: #0b0b0b;
+    --bg-blob: #0c0c0c;
+    --red-accent: #830000;
+    --text-white: #FFFFFF;
+    
+    /* Card Colors */
+    --discord-bg: #7289da;
+    --discord-text: #282b30;
+    --discord-btn: #426CFF;
+    
+    --fb-bg: #17A9FD;
+    --fb-btn: #0165E1;
+    --fb-btn-hover: #426CFF;
+    
+    --ig-btn: #833AB4;
+}
+
+body {
+    background-color: var(--bg-darker);
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+.anton-font {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.5px;
+}
+.roboto-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.header {
+    height: 100px;
+    border-bottom: 2px solid var(--red-accent);
+    background-color: var(--bg-darker);
+}
+.logo h1 {
+    font-size: 28px;
+    line-height: 1;
+}
+.logo-sub {
+    font-size: 11px;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+}
+.header-tagline {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--bg-darker);
+    position: relative;
+    min-height: 550px;
+    border-bottom: 2px solid #111;
+}
+.hero-title {
+    font-size: 90px;
+    line-height: 0.95;
+    margin-bottom: 5px;
+}
+.badge-ready {
+    display: inline-block;
+    border: 3px solid var(--red-accent);
+    border-radius: 8px;
+    padding: 2px 20px;
+    transform: rotate(-4deg);
+    margin-left: 25px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+}
+.badge-ready span {
+    font-size: 32px;
+    color: var(--text-white);
+}
+.hero-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 480px;
+}
+
+/* Hero Image & Blob Background */
+.hero-image-col {
+    position: relative;
+}
+.blob-bg {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: var(--bg-blob);
+    border-radius: 40% 50% 10% 10%;
+    z-index: 0;
+}
+.hero-image {
+    max-height: 550px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.6));
+}
+
+/* Cards Section */
+.cards-section {
+    padding: 65px 0 80px;
+    background-color: var(--bg-darker);
+}
+.social-card {
+    position: relative;
+    border-radius: 16px;
+    padding: 35px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+.social-card:hover, .social-card:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    outline: none;
+}
+.social-card:active {
+    transform: translateY(0);
+}
+.card-brand {
+    font-size: 18px;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+.card-title {
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    z-index: 2;
+    max-width: 85%;
+}
+.card-desc {
+    font-size: 11px;
+    max-width: 65%;
+    margin-bottom: 25px;
+    z-index: 2;
+}
+.text-discord-dark {
+    color: var(--discord-text) !important;
+}
+.social-btn {
+    align-self: flex-start;
+    border-radius: 8px;
+    padding: 8px 30px;
+    font-size: 14px;
+    z-index: 2;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.social-btn:active {
+    transform: scale(0.96);
+}
+.card-bg-icon {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    opacity: 0.25;
+    z-index: 0;
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+.fb-icon-adjust {
+    right: -40px;
+    bottom: -40px;
+    transform: rotate(0deg);
+}
+
+/* Specific Card Styles */
+.discord-card {
+    background-color: var(--discord-bg);
+}
+.discord-btn {
+    background-color: var(--discord-btn);
+    color: var(--text-white);
+}
+.discord-btn:hover { background-color: #2b55f5; color: #fff; }
+
+.instagram-card {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+.instagram-btn {
+    background-color: var(--ig-btn);
+    color: var(--text-white);
+}
+.instagram-btn:hover { background-color: #6a2e91; color: #fff; }
+
+.tiktok-card {
+    background: linear-gradient(#000000, #000000) padding-box, 
+                linear-gradient(45deg, #FE2C55, #25F4EE) border-box;
+    border: 3px solid transparent;
+}
+.tiktok-btn {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.tiktok-btn:hover { background-color: #e0e0e0; }
+
+.facebook-card {
+    background-color: var(--fb-bg);
+}
+.facebook-btn {
+    background-color: var(--fb-btn);
+    color: var(--text-white);
+}
+.facebook-btn:hover { background-color: var(--fb-btn-hover); color: #fff; }
+
+/* Footer */
+.footer {
+    border-top: 2px solid var(--red-accent);
+    background-color: var(--bg-darker);
+}
+.footer-left {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.footer-right a {
+    font-size: 16px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+.footer-right a:hover, .footer-right a:focus {
+    color: var(--red-accent) !important;
+    outline: none;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .hero-title { font-size: 70px; }
+    .badge-ready span { font-size: 24px; }
+}
+
+@media (max-width: 767px) {
+    .header { height: auto; padding: 15px 0; }
+    .hero-section { min-height: auto; text-align: center; }
+    .hero-text-col { text-align: center; margin-bottom: 20px; }
+    .badge-ready { transform: rotate(0); margin-left: 0; }
+    .hero-desc { margin: 0 auto; }
+    .hero-image { max-height: 400px; margin-top: 20px; }
+    .blob-bg { right: 10%; width: 80%; }
+    
+    .social-card { height: auto; min-height: 240px; }
+    .card-title { font-size: 22px; max-width: 100%; }
+    .card-desc { max-width: 100%; }
+    .card-bg-icon { width: 160px; height: 160px; right: -10px; bottom: -10px; }
+    
+    .footer-right { flex-wrap: wrap; justify-content: center; gap: 15px !important; }
+}
